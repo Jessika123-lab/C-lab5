@@ -1,0 +1,31 @@
+using System;
+
+
+namespace Lab5_завд3
+{
+    class Class1
+    {
+        static double getSum(double x, double eps)
+        { double c = -Math.Pow(x, 2);
+            double mn = c;
+            double z = 2;
+            int f = 3;
+            double s = 1;
+            while ((c/z)<eps)
+            { s += c / z;
+                c *= mn;
+                z *= f * (f + 1);
+                f += 2;
+            }
+            return s;
+            
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("x");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("e");
+            double eps = Convert.ToDouble(Console.ReadLine());
+        }
+    }
+}
