@@ -1,0 +1,26 @@
+using System;
+
+
+namespace Lab5_завд4
+{
+    class Class1
+    {
+            static void Main(string[] args)
+            {
+               
+                int xi = 0, x0 = 0, x1, x2;
+                x1 = x2 = 9;
+                Console.WriteLine("n=");
+                int n = Convert.ToInt32(Console.ReadLine());
+                for (int i = 3; i <= n; i++)
+                {
+                    xi = x2 + 4*x0;
+                    x2 = x1;
+                    x1 = x2;
+                    x2 = xi;
+                }
+                Console.WriteLine($"f{n}={xi}");
+
+            }
+        }
+    }
